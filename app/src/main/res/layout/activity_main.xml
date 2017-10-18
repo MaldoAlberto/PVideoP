@@ -1,0 +1,257 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/textColorPrimary"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="#FFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:touchscreenBlocksFocus="true" />
+
+    <TextView
+        android:background="@color/textColorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Animation.Activity"
+        android:text="Ingrese una clave de 4 dígitos para el bloqueo del celular"
+        android:textSize="18sp"
+        android:id="@+id/textView2"
+        android:textColor="@color/primary_dark"
+        android:layout_gravity="center_horizontal"
+        android:autoText="false"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:contextClickable="true"
+        android:fontFamily="@string/app_name" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:background="@drawable/line"
+        android:elevation="5px"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/clave"
+        android:divider="@color/divider"
+        android:textColorHint="@color/text_secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textColor="@color/text_primary"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical|center_horizontal">
+
+        <ImageView
+            android:elevation="5dp"
+            android:translationZ="1dp"
+            android:tint="@color/primary_light"
+            android:background="@drawable/circle"
+            android:id="@+id/icono2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/key"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="right" />
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/accent"
+            android:id="@+id/layout_contraena"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_primary"
+            android:background="#fff"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:translationZ="1dp">
+
+            <EditText
+                android:background="@drawable/clave"
+                android:id="@+id/contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:textColor="@color/colorPrimary"
+                android:maxLength="4"
+                android:ems="4"
+                android:hint="Clave"
+                android:gravity="center_vertical|center"
+                android:textSize="18dp" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/fondoItem"
+        android:divider="@color/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|center_horizontal">
+        <ImageView
+            android:tint="@color/primary_light"
+            android:elevation="10dp"
+            android:translationZ="1dp"
+            android:background="@drawable/circle"
+            android:id="@+id/icono"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/key"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="right|center_horizontal" />
+
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/accent"
+            android:backgroundTint="@color/textColorPrimary"
+            android:id="@+id/layout_confirmacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:translationZ="1dp">
+
+            <EditText
+                android:background="@drawable/clave"
+                android:id="@+id/contrasenaRepetida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:textColor="@color/colorPrimary"
+                android:maxLength="4"
+                android:ems="4"
+                android:hint="Confirmación"
+                android:gravity="center_vertical|center|center_horizontal"
+                android:textSize="18dp"
+                android:paddingRight="100dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:background="@drawable/line"
+        android:elevation="5px"
+        android:layout_height="1px"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/valida"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="Aceptar"
+        android:onClick="Valida"
+        android:background="@drawable/rectangle"
+        android:layout_marginTop="40dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:elevation="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <Button
+            android:background="@drawable/rectangle"
+            android:id="@+id/cambiarClave"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:text="Cambiar clave"
+            android:textSize="12dp"
+            android:onClick="cambiar"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="false"
+            android:layout_centerVertical="true"
+            android:autoText="false"
+            android:autoLink="all"
+            android:elevation="10dp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/olvidaClave"
+        android:layout_width="158dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:autoLink="all"
+        android:autoText="false"
+        android:background="@drawable/rectangle"
+        android:elevation="5dp"
+        android:onClick="olvidar"
+        android:text="¿Olvidaste tu clave?"
+        android:textSize="10dp" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ahora ya puedes visualizar los vídeos"
+        android:textSize="18sp"
+        android:id="@+id/textView3"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/primary_dark"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/ip"
+        android:textColor="@color/accent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/menuVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="irMenu"
+            android:contentDescription="Menu de videos"
+            android:src="@drawable/movie"
+            android:transitionName="fab_transition"
+            android:tint="@android:color/white"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

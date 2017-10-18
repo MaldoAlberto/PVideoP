@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoItem"
+    android:textAlignment="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:text="Ingrese la clave para desbloquear"
+        android:gravity="center_vertical|center|center_horizontal"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+         android:textColor="@color/colorPrimary"
+
+    />
+
+    <android.support.design.widget.TextInputLayout
+        android:textColorHint="@color/accent"
+        android:id="@+id/layout_respuesta"
+        android:layout_width="match_parent"
+        android:textColor="@color/text_primary"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center|center_horizontal"
+        android:translationZ="1dp"
+        android:layout_gravity="left"
+        >
+        <EditText
+            android:background="@drawable/clave"
+            android:id="@+id/respuesta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:textColor="@color/colorPrimary"
+            android:maxLength="4"
+            android:ems="4"
+            android:hint="Clave"
+            android:textSize="18dp"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:paddingRight="100dp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+</LinearLayout>

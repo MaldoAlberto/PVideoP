@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alberto.pvideop">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <supports-screens android:requiresSmallestWidthDp="600" />
+    <supports-screens android:requiresSmallestWidthDp="1920" />
+    <supports-screens android:requiresSmallestWidthDp="1200" />
+
+
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+    <!--  android:required="false" /> -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--<category android:name="android.intent.category.LEANBACK_LAUNCHER" />-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MenuVideos" android:label="Videos"  />
+        <activity android:name=".Reproductor"></activity>
+        <intent-filter>
+            <action android:name="android.intent.action.ACTION_PROGESO" />
+            <action android:name="android.intent.action.ACTION_FIN" />
+
+        </intent-filter>
+        <service android:name="com.example.alberto.pvideop.ImagenVideo.MiIntentService"></service>
+
+    </application>
+
+</manifest>

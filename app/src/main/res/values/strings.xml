@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PVideoP</string>
+
+    <string name="action_settings">Definición de géneros</string>
+    <string name="title_activity_menu_videos">Menú de Vídeos</string>
+    <string name="dialogo_titulo_cambiar_clave">Cambiar Clave</string>
+    <string name="dialog_mensaje_cambiar_clave">
+       \t<b><i>Aceptar</i></b> para realizar el cambio de clave.\n
+       \t<b><i>Cancelar</i></b> para regresar al menú principal.
+    </string>
+    <string name="dilogo_titulo_video">Opciones del vídeo</string>
+    <string name="dialogo_aceptar_cambiar_clave">Aceptar</string>
+    <string name="dialogo_titulo_información">Información del vídeo</string>
+    <string name="dialogo_titulo_EliminarVideo">Eliminar Vídeo</string>
+    <string name="dialogo_mensaje_EliminarVideo">Para poder eliminar el vídeo, oprima en Aceptar.</string>
+
+    <string name="dialogo_titulo_recuperar_clave">Recordar clave</string>
+    <string name="dialogo_mensaje_recuperar_clave">La clave de su dispositivo inicia con el número: </string>
+
+</resources>

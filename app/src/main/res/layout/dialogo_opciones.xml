@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoItem"
+    android:textAlignment="center">
+        <android.support.design.widget.TextInputLayout
+            android:textColorHint="@color/accent"
+            android:id="@+id/layout_claveActual"
+            android:layout_width="match_parent"
+            android:textColor="@color/text_primary"
+            android:background="#fff"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:translationZ="1dp"
+            android:layout_gravity="left"
+            android:paddingTop="40dp">
+        <EditText
+                android:background="@drawable/clave"
+                android:id="@+id/claveActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:textColor="@color/colorPrimary"
+                android:maxLength="4"
+                android:ems="4"
+                android:hint="Clave Actual"
+                android:textSize="18dp"
+                android:gravity="center_vertical|center|center_horizontal"
+                android:paddingRight="100dp" />
+        </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:textColorHint="@color/accent"
+        android:id="@+id/layout_claveNueva"
+        android:layout_width="match_parent"
+        android:textColor="@color/text_primary"
+        android:background="#fff"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center|center_horizontal"
+        android:translationZ="1dp"
+        android:layout_gravity="left"
+        android:paddingTop="40dp">
+        <EditText
+            android:background="@drawable/clave"
+            android:id="@+id/claveNueval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:textColor="@color/colorPrimary"
+            android:maxLength="4"
+            android:ems="4"
+            android:hint="Clave Nueva"
+            android:textSize="18dp"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:paddingRight="100dp" />
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

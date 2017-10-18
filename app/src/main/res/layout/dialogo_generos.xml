@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoItem"
+    android:textAlignment="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Si es seleccionado el género significa que es apropiado, en caso contrario es un género inapropiado. Donde género 1 es un género apropiado y género 2 es un género inapropiado"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:paddingTop="10dp"
+        android:text="Ejemplo:" />
+    <CheckBox
+        android:id="@+id/ej1"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:enabled="false"
+        android:editable="false"
+        android:textSize="10sp"
+        android:text="Género 1" />
+
+    <CheckBox
+        android:id="@+id/ej2"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:editable="false"
+        android:textSize="10sp"
+        android:text="Género 2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Configura los géneros "
+        android:textSize="16sp" />
+
+
+
+    <CheckBox
+        android:id="@+id/Caricatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Caricatura" />
+
+    <CheckBox
+        android:id="@+id/Documental"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Documental" />
+
+    <CheckBox
+        android:id="@+id/Futbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Futbol" />
+
+
+
+    <CheckBox
+        android:id="@+id/Guerra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Guerra" />
+
+    <CheckBox
+        android:id="@+id/Noticia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Noticia" />
+
+    <CheckBox
+        android:id="@+id/Novela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Novela" />
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/textColorPrimary"
+    tools:context=".MainActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:titleTextColor="#FFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:touchscreenBlocksFocus="true" />
+
+        <TextView
+            android:background="@color/textColorPrimary"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Animation.Activity"
+            android:text="Ingrese una clave de 4 dígitos para el bloqueo del celular"
+            android:textSize="18sp"
+            android:id="@+id/textView2"
+            android:textColor="@color/primary_dark"
+            android:layout_gravity="center_horizontal"
+            android:autoText="false"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:contextClickable="true"
+            android:fontFamily="@string/app_name" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:layout_weight="0.26"
+            android:background="#ffffff"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/icono"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/key"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="   Clave    "
+                android:textColor="@color/divider"
+                android:textSize="25dp"
+                android:id="@+id/Titulocontrasena"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="8dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignBottom="@+id/icono"
+                android:layout_toEndOf="@+id/icono" />
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberPassword"
+                android:ems="4"
+                android:id="@+id/contrasena"
+                android:layout_gravity="center_horizontal"
+                android:maxHeight="4dp"
+                android:maxLength="4"
+                android:textSize="27dp"
+                android:textColor="@color/title"
+                android:textIsSelectable="false"
+                android:shadowColor="#aaaaaa"
+                android:layout_alignTop="@+id/Titulocontrasena"
+                android:layout_toEndOf="@+id/Titulocontrasena"
+                android:layout_marginStart="56dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:layout_weight="0.10"
+            android:background="#ffffff"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iconoC"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/key"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+            <TextView
+                android:text="Confirmación"
+                android:textSize="25dp"
+                android:id="@+id/Titulocontrasena2"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/divider"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="8dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:layout_alignBottom="@+id/iconoC"
+                android:layout_toEndOf="@+id/iconoC"/>
+
+            <EditText
+                android:inputType="numberPassword"
+                android:ems="4"
+                android:id="@+id/contrasenaRepetida"
+                android:layout_gravity="center_horizontal"
+                android:elegantTextHeight="false"
+                android:maxLength="4"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="4dp"
+                android:textSize="27dp"
+                android:textColor="@color/title"
+                android:textIsSelectable="false"
+                android:shadowColor="#aaaaaa"
+                android:layout_alignTop="@+id/Titulocontrasena2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="5dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/valida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aceptar"
+            android:enabled="true"
+            android:onClick="sendMessage"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/primary_light"/>
+
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cambiar contrseña"
+            android:id="@+id/cambiarClave"
+            android:onClick="cambiar"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ahora ya puedes visualizar los vídeos"
+        android:textSize="18sp"
+        android:id="@+id/textView3"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/primary_dark"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+
+        <Button
+            android:id="@+id/menuVideo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Ir al Menú de videos"
+            android:onClick="irMenu"
+            android:background="@color/colorPrimary"
+            />
+
+
+        <EditText
+            android:textColor="@color/accent"
+            android:id="@+id/ip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            />
+
+</LinearLayout>

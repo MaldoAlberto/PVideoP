@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <FrameLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="0dp">
+        <com.example.alberto.pvideop.ImagenVideo.MyGLSurfaceView
+            android:id="@+id/glsurfaceview1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/rewind_java"
+            android:layout_gravity="right|bottom" />
+        <TextView
+            android:id="@+id/genero"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:elevation="24dp"
+            android:padding="10dp"
+            android:text=""
+            android:alpha="0.5"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="18sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/start_java"
+                    android:layout_width="50dp"
+                    android:layout_height="49dp"
+                    android:clickable="true"
+                    android:onClick="playStop"
+                    android:contentDescription="Menu de videos"
+                    android:src="@drawable/ic_play_arrow_black_24dp"
+                    android:transitionName="fab_transition"
+                    android:tint="@android:color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/glsurfaceview1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="bottom" />
+
+                <TextView
+                    android:id="@+id/tiempoTemp"
+                    android:text="00:00"
+                    android:layout_width="36dp"
+                    android:textColor="#fcf9f9"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="5dp" />
+
+                <SeekBar
+                    android:id="@+id/musicSeekBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="50px">
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/tiempoTotal"
+                    android:text="00:00"
+                    android:layout_width="36dp"
+                    android:textColor="#fcf9f9"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="5dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/rewind_java"
+                    android:layout_width="50dp"
+                    android:layout_height="49dp"
+                    android:clickable="true"
+                    android:onClick="rewind"
+                    android:contentDescription="Menu de videos"
+                    android:src="@drawable/ic_replay_black_24"
+                    android:transitionName="fab_transition"
+                    android:tint="@android:color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="bottom" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>
